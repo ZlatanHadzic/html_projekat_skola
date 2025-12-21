@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+<meta charset="UTF-8">
+<title>Eldar Godinajk – Web page</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+/* ANIMIRANI BACKGROUND UČIONICE */
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: url("https://png.pngtree.com/background/20210717/original/pngtree-cartoon-learning-utensils-classroom-education-background-picture-image_1427786.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    animation: bgMove 20s ease-in-out infinite;
+}
+
+@keyframes bgMove {
+    0% { background-position: center top; }
+    50% { background-position: center bottom; }
+    100% { background-position: center top; }
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 90px;
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(8px);
+    border-bottom: 4px solid #0b4f6c;
+    animation: drop 1s ease;
+}
+
+@keyframes drop {
+    from { transform: translateY(-40px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* SLIKA */
+.slika {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.slika img {
+    max-width: 420px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    animation: pop 1.5s ease;
+}
+
+@keyframes pop {
+    from { transform: scale(0.7); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* SEKCIJE */
+section {
+    width: 85%;
+    margin: 40px auto;
+    background: rgba(255,255,255,0.9);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    animation: fadeUp 1.2s ease;
+}
+
+@keyframes fadeUp {
+    from { transform: translateY(40px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+h2 {
+    color: #0b4f6c;
+    text-align: center;
+}
+
+/* TABELA */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    border: 1px solid #8ccae6;
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #8ccae6;
+    color: white;
+}
+
+/* CONTENTEDITABLE */
+[contenteditable] {
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+}
+
+[contenteditable]:hover {
+    background: #e6f4fb;
+    transform: scale(1.05);
+}
+
+/* OCJENE */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 12px 0;
+    font-size: 18px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+    100% { transform: scale(1); }
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    margin: 40px 0;
+}
+
+footer a {
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+    color: #0b4f6c;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NASLOV -->
+<header>
+    <h1>Eldar Godinjak</h1>
+    <p>Moja Web stranica</p>
+</header>
+
+<!-- SLIKA -->
+<div class="slika">
+    <img src="https://www.zenicablog.com/wp-content/uploads/2023/05/skijin-mem-860x522-1.jpg" alt="Eldar">
+</div>
+
+<!-- ČASOVI -->
+<section>
+    <h2>Časovi koje pohađam</h2>
+    <table>
+        <tr>
+            <th>Predmet</th>
+            <th>Dan</th>
+            <th>Vrijeme</th>
+        </tr>
+        <tr><td contenteditable>Matematika</td><td contenteditable>Ponedjeljak</td><td contenteditable>08:00</td></tr>
+        <tr><td contenteditable>Bosanski jezik</td><td contenteditable>Utorak</td><td contenteditable>09:00</td></tr>
+        <tr><td contenteditable>Engleski jezik</td><td contenteditable>Srijeda</td><td contenteditable>10:00</td></tr>
+        <tr><td contenteditable>Njemački jezik</td><td contenteditable>Četvrtak</td><td contenteditable>11:00</td></tr>
+        <tr><td contenteditable>Informatika</td><td contenteditable>Petak</td><td contenteditable>12:00</td></tr>
+        <tr><td contenteditable>Tjelesni odgoj</td><td contenteditable>Petak</td><td contenteditable>13:00</td></tr>
+    </table>
+</section>
+
+<!-- OCJENE -->
+<section>
+    <h2>Moje ocjene </h2>
+    <ul>
+        <li contenteditable=>Matematika: <span contenteditable>4</span></li>
+        <li contenteditable=>Bosanski jezik: <span contenteditable>5</span></li>
+        <li contenteditable=>Engleski jezik: <span contenteditable>5</span></li>
+        <li contenteditable>Njemački jezik: <span contenteditable>4</span></li>
+        <li contenteditable=>Informatika: <span contenteditable>5</span></li>
+        <li contenteditable=>Tjelesni odgoj: <span contenteditable>5</span></li>
+    </ul>
+</section>
+
+<!-- LINK -->
+<footer>
+     <a href="https://www.mojlink.com" target="_blank">Moja Web Stranica</a>
+</footer>
+
+</body>
+</html>
